@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="learn-flight:war">
+    <output-path>$PROJECT_DIR$/learn-flight/target</output-path>
+    <root id="archive" name="learn.flight-1.0.0.war">
+      <element id="artifact" artifact-name="learn-flight:war exploded" />
+    </root>
+  </artifact>
+</component>
