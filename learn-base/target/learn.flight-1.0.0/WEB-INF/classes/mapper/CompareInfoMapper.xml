@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qunar.com.qunar.fresh.dao.CompareInfoDao">
+
+    <insert id="saveCompareInfo" parameterType="CompareInfo">
+        INSERT INTO
+        exam3.compare_result (`compareTime`,`sourceContext`,`targetContext`,`diffContext`)
+        VALUES
+        (
+        #{compareTime},#{sourceContext},#{targetContext},#{diffContext}
+        )
+    </insert>
+
+    <select id="queryCompareInfos" resultType="CompareInfo">
+        SELECT
+           `id`,`compareTime`,`sourceContext`,`targetContext`,`diffContext`
+         FROM 
+            exam3.compare_result
+    </select>
+
+    <delete id="deleteCompareInfo" parameterType="Integer">
+        DELETE FROM exam3.compare_result WHERE `id`=#{id};
+    </delete>
+
+    <select id="queryCompareInfoCount" resultType="Integer">
+        SELECT
+            COUNT(*) AS num
+         FROM
+            exam3.compare_result;
+    </select>
+
+</mapper>

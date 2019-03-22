@@ -12,7 +12,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/learn-flight" />
+    <file type="web" url="file://$PROJECT_DIR$/learn-base" />
     <file type="web" url="file://$PROJECT_DIR$/learn-netty" />
   </component>
   <component name="IdProvider" IDEtalkID="3D3D5984E5D1B4D1971F45BD2E1028F7" />

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="defaultStatementTimeout" value="3000"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+
+    <typeAliases>
+        <package name="com.qunar.fresh.model"/>
+    </typeAliases>
+    <typeHandlers>
+        <typeHandler handler="com.qunar.com.qunar.fresh.util.JodaTimeTypeHandler" javaType="org.joda.time.DateTime"/>
+    </typeHandlers>
+
+    <plugins>
+        <!--使用公司的物理分页-->
+        <plugin interceptor="com.qunar.base.meerkat.orm.mybatis.support.ResultSetHandlerInterceptor"/>
+        <plugin interceptor="com.qunar.base.meerkat.orm.mybatis.support.StatementHandlerInterceptor"/>
+    </plugins>
+
+</configuration>
