@@ -8,7 +8,7 @@
 
 
     <modules>
-        <module>learn-flight</module>
+        <module>learn-base</module>
     </modules>
     <packaging>pom</packaging>
 
